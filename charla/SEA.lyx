@@ -303,12 +303,9 @@ only<1-3>{
 \end_inset
 
 
-
 \begin_inset VSpace 45theight%
 \end_inset
 
-
-\lang spanish
 
 \begin_inset ERT
 status open
@@ -380,10 +377,7 @@ status open
 
 \end_inset
 
-
 ¿Que sucede cuando alguien descubre bugs o vulnerabilidades?
-\lang spanish
-
 \begin_inset ERT
 status open
 
@@ -535,7 +529,7 @@ only<2->{
 
 
 \begin_inset Graphics
-	filename ../../../../Code/phd/vulcain/Submissions/CSTVA12/slides/images/nuclear_symbol.png
+	filename imgs/nuclear_symbol.png
 	lyxscale 20
 	width 20col%
 
@@ -579,7 +573,7 @@ only<3->{
 
 
 \begin_inset Graphics
-	filename ../../../../Code/phd/vulcain/Submissions/CSTVA12/slides/images/google.png
+	filename imgs/google.png
 	lyxscale 20
 	width 30col%
 
@@ -619,7 +613,7 @@ only<4->{
 
 
 \begin_inset Graphics
-	filename ../../../../Code/phd/vulcain/Submissions/CSTVA12/slides/images/NewYorkTimes-logo.jpg
+	filename imgs/NewYorkTimes-logo.jpg
 	lyxscale 30
 	width 25col%
 
@@ -985,7 +979,7 @@ status open
 
 
 \backslash
-only<3->{
+only<2->{
 \end_layout
 
 \end_inset
@@ -1052,7 +1046,7 @@ status open
 
 
 \backslash
-only<4->{
+only<3->{
 \end_layout
 
 \end_inset
@@ -1105,6 +1099,103 @@ Objectivos del proyecto
 \end_inset
 
 
+\end_layout
+
+\begin_layout BeginFrame
+Satisfiability Modulo Theories (SAT)
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size giant
+\begin_inset Formula $X=Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lógica:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lógica proposicional (
+\begin_inset Formula $x|y=z$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Cuantificadores (
+\begin_inset Formula $\forall x\centerdot x=y$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Matemática: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lineales (
+\begin_inset Formula $x+y=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+No lineales (
+\begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Números Binarios (longitud finita).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Operaciones de bits (
+\begin_inset Formula $x\mbox{>>}y=z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Arreglos (
+\begin_inset Formula $x[y]=z$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Generación asistida de exploits
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\begin_layout BeginFrame
+¿Donde están los exploits?
+\end_layout
+
+\begin_layout Standard
+TODO
 \end_layout
 
 \begin_layout BeginFrame
