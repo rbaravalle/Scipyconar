@@ -1030,7 +1030,7 @@ key "ChaARB12"
 
 \end_inset
 
-
+ (Universidad de Carnegie Melon)
 \end_layout
 
 \begin_deeper
@@ -1090,6 +1090,30 @@ status open
 Objectivos del proyecto
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Fácilitar
+\series default
+ el 
+\series bold
+análisis y descubrimiento
+\series default
+ de vulnerabilidades en 
+\series bold
+programas binarios
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Democratizar el acceso a la implementación de la h.
+\end_layout
+
+\begin_layout BeginFrame
+Las herramientas apropiadas..
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset Graphics
@@ -1099,6 +1123,14 @@ Objectivos del proyecto
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Satisfiability Modulo Theories
+\end_layout
+
+\begin_layout Itemize
+Representación abstracta de instrucciones ensamblador.
 \end_layout
 
 \begin_layout BeginFrame
@@ -1122,19 +1154,129 @@ Lógica:
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
 Lógica proposicional (
-\begin_inset Formula $x|y=z$
+\begin_inset Formula $x\wedge y=z$
 \end_inset
 
 )
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Lógica proposicional (
+\begin_inset Formula $x\wedge y=z$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
 Cuantificadores (
 \begin_inset Formula $\forall x\centerdot x=y$
 \end_inset
 
 )
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Cuantificadores (
+\begin_inset Formula $\forall x\centerdot x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1144,27 +1286,145 @@ Matemática:
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
 Lineales (
 \begin_inset Formula $x+y=1$
 \end_inset
 
 )
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Lineales (
+\begin_inset Formula $x+y=1$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
 No lineales (
 \begin_inset Formula $x*x=y$
 \end_inset
 
 )
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+No lineales (
+\begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Números Binarios (longitud finita).
+Números Binarios (longitud finita)
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+Aritmética de precisión finita (
+\begin_inset Formula $x+y=1)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 Operaciones de bits (
 \begin_inset Formula $x\mbox{>>}y=z)$
@@ -1187,7 +1447,240 @@ Generación asistida de exploits
 \end_layout
 
 \begin_layout Standard
-TODO
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="20text%">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/500px-Windows_logo_-_2002.svg.png
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ensamblador abstracto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/500px-Tux.svg.png
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/arrow.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/Mac_Operating_System_Logo.jpg
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
