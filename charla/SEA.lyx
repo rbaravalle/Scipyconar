@@ -963,7 +963,10 @@ key "Heelan09"
 
 \end_inset
 
- (Universidad de Oxford)
+ 
+\size small
+(U.
+ de Oxford)
 \end_layout
 
 \begin_deeper
@@ -1030,7 +1033,10 @@ key "ChaARB12"
 
 \end_inset
 
- (Universidad de Carnegie Melon)
+ 
+\size small
+(U.
+ de Carnegie Melon)
 \end_layout
 
 \begin_deeper
@@ -1091,6 +1097,36 @@ Objectivos del proyecto
 \end_layout
 
 \begin_layout Itemize
+Plataforma que permita analizar programas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Facilitar 
+\series default
+la búsqueda vulnerabilidades concretas.
+\end_layout
+
+\begin_layout Itemize
+Definir 
+\series bold
+nuevos tipos
+\series default
+ de vulnerabilidades.
+\end_layout
+
+\begin_layout Itemize
+No requiera el uso de 
+\series bold
+código fuente
+\series default
+ de los programas analizados.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 
 \series bold
 Fácilitar
@@ -1106,10 +1142,26 @@ programas binarios
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-Democratizar el acceso a la implementación de la h.
+
+\series bold
+Desarrollo
+\series default
+ y aplicación de técnicas para la búsqueda de vulnerabilidades concretas.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+Formar una comunidad Democratizar el acceso a la implementación de la h.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+¡Ya disponible en Github! 
+\end_layout
+
+\end_deeper
 \begin_layout BeginFrame
 Las herramientas apropiadas..
 \end_layout
@@ -1126,15 +1178,15 @@ Las herramientas apropiadas..
 \end_layout
 
 \begin_layout Itemize
-Satisfiability Modulo Theories
+Teorías de satisfabilidad (SMT).
 \end_layout
 
 \begin_layout Itemize
-Representación abstracta de instrucciones ensamblador.
+Representación intermedia de instrucciones ensamblador.
 \end_layout
 
 \begin_layout BeginFrame
-Satisfiability Modulo Theories (SAT)
+Satisfiability Modulo Theories (SMT)
 \end_layout
 
 \begin_layout Standard
@@ -1298,7 +1350,7 @@ only<1>{
 
 \end_inset
 
-Lineales (
+Operaciones lineales (
 \begin_inset Formula $x+y=1$
 \end_inset
 
@@ -1328,7 +1380,7 @@ only<2->{
 
 
 \strikeout on
-Lineales (
+Operaciones lineales (
 \begin_inset Formula $x+y=1$
 \end_inset
 
@@ -1361,7 +1413,7 @@ only<1>{
 
 \end_inset
 
-No lineales (
+Operaciones no lineales (
 \begin_inset Formula $x*x=y$
 \end_inset
 
@@ -1391,8 +1443,71 @@ only<2->{
 
 
 \strikeout on
-No lineales (
+Operaciones no lineales (
 \begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Funciones (
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Funciones (
+\begin_inset Formula $f(x)=y$
 \end_inset
 
 )
@@ -1442,255 +1557,6 @@ Arreglos (
 \end_layout
 
 \end_deeper
-\begin_layout BeginFrame
-Generación asistida de exploits
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="20text%">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\align left
-\begin_inset Graphics
-	filename imgs/500px-Windows_logo_-_2002.svg.png
-	lyxscale 20
-	height 15theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Ensamblador abstracto
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\align left
-\begin_inset Graphics
-	filename imgs/500px-Tux.svg.png
-	lyxscale 20
-	height 15theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\align left
-\begin_inset Graphics
-	filename imgs/arrow.png
-	lyxscale 30
-	height 15theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
-\align left
-\begin_inset Graphics
-	filename imgs/Mac_Operating_System_Logo.jpg
-	lyxscale 20
-	height 15theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout BeginFrame
-¿Donde están los exploits?
-\end_layout
-
-\begin_layout Standard
-TODO
-\end_layout
-
 \begin_layout BeginFrame
 REIL
 \end_layout
@@ -5255,6 +5121,1310 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout BeginFrame
+Symbolic Exploit Assistant (SEA)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="10text%">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="20text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/500px-Windows_logo_-_2002.svg.png
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Código ensamblador
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+abstracto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Conjunto de restricciones
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/500px-Tux.svg.png
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/arrow.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size footnotesize
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ 
+\color red
+eax
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ebx
+\color inherit
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size footnotesize
+02: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size footnotesize
+..
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/arrow.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/smt.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/Mac_Operating_System_Logo.jpg
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¿Donde están los exploits?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename diagrams/input_space.dia
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¿Una vulnerabilidad?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ 
+\color red
+eax
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ebx
+\color inherit
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula $t_{0}=0$
+\end_inset
+
+ then zf
+\begin_inset Formula $=1$
+\end_inset
+
+ else zf
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if zf
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\begin_inset Formula $t_{1}$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ 
+\color red
+eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Sobreescribiendo una dirección de memoria:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+
+\family typewriter
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+16: mem[ebp
+\begin_inset Formula $+4$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ 
+\begin_inset Formula $0xdeadbeef$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size small
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $t_{1}=\mbox{ebp}+4$
+\end_inset
+
+ 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $\mbox{eax}=0xdeadbeef$
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Generando restricciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ eax
+\begin_inset Formula $+$
+\end_inset
+
+ebx 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula $t_{0}=0$
+\end_inset
+
+ then zf
+\begin_inset Formula $=1$
+\end_inset
+
+ else zf
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if zf
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\begin_inset Formula $t_{1}$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2>{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula ${\color{blue}t_{0}}=$
+\end_inset
+
+ 
+\color blue
+eax
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color blue
+ebx
+\color inherit
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula ${\color{blue}t_{0}}=0$
+\end_inset
+
+ then 
+\color blue
+zf
+\color inherit
+
+\begin_inset Formula $=1$
+\end_inset
+
+ else 
+\color blue
+zf
+\color inherit
+
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if 
+\color blue
+zf
+\color inherit
+
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\begin_inset Formula $t_{1}$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<3>{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ eax
+\begin_inset Formula $+$
+\end_inset
+
+ebx 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula $t_{0}=0$
+\end_inset
+
+ then zf
+\begin_inset Formula $=1$
+\end_inset
+
+ else zf
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if zf
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula ${\color{blue}t_{1}}=$
+\end_inset
+
+ 
+\color blue
+ebp
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color blue
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\color blue
+
+\begin_inset Formula $t_{1}$
+\end_inset
+
+
+\color inherit
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ 
+\color blue
+eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\pi_{bug}=\{\mbox{zf}\neq0\mbox{, ~}ite(t_{0}=0,\mbox{zf}=1,\mbox{zf}=0)\mbox{, ~}t_{0}=\mbox{eax}+\mbox{ebx}\}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<3->{
+\end_layout
+
+\end_inset
+
+
+\family roman
+
+\begin_inset Formula $\pi_{exp}=\{\mbox{eax}=0xdeadbeef\mbox{, \,}t_{1}=\mbox{ebp}+4\mbox{, \,}t_{1}=\mbox{ebp}+\mbox{ecx}\}$
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Resolviendo restricciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="20page%">
+<column alignment="center" valignment="top" width="2page%">
+<column alignment="center" valignment="top" width="20page%">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="30page%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Obtener 
+\begin_inset Formula $\pi_{bug}\cup\pi_{exp}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Generar restricciones SMT-LIB2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resolver con un solver SMT (Z3, CVC, ..)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Resultado:}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula $\mbox{eax}=0xdeadbeef$
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula $\mbox{ebx}=0x21524111$
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula $\mbox{ecx}=0x00000004$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¡SEA en acción!
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/anykey.jpg
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+(
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Fork Me
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+ in Github! 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/neuromancer/SEA
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout EndFrame
