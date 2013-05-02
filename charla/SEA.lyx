@@ -921,6 +921,45 @@ status open
 
 \end_deeper
 \begin_layout BeginFrame
+Objectivos del proyecto
+\end_layout
+
+\begin_layout Itemize
+Plataforma que permita analizar programas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Facilitar 
+\series default
+la búsqueda vulnerabilidades concretas.
+\end_layout
+
+\begin_layout Itemize
+Definir 
+\series bold
+nuevos tipos
+\series default
+ de vulnerabilidades.
+\end_layout
+
+\begin_layout Itemize
+Sin requerir el uso de 
+\series bold
+código fuente
+\series default
+ del software analizado.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Formar una comunidad y democratizar el acceso a la implementación de este
+ tipo de herramientas.
+\end_layout
+
+\begin_layout BeginFrame
 ¿Reinventando la rueda ..?
 \end_layout
 
@@ -936,36 +975,14 @@ status open
 \end_layout
 
 \begin_layout Itemize
-!Exploitable
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Exploitable"
-
-\end_inset
-
- (Microsoft Corp.)
+!Exploitable (Microsoft Corp.)
 \end_layout
 
 \begin_layout Itemize
 Automatic Generation of Control Flow Hijacking Exploits for Software Vulnerabili
 ties
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Heelan09"
-
-\end_inset
-
- 
 \size small
-(U.
+ (U.
  de Oxford)
 \end_layout
 
@@ -1022,18 +1039,7 @@ status open
 
 \end_deeper
 \begin_layout Itemize
-Unleashing MAYHEM on Binary Code
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ChaARB12"
-
-\end_inset
-
- 
+Unleashing MAYHEM on Binary Code 
 \size small
 (U.
  de Carnegie Melon)
@@ -1093,77 +1099,236 @@ status open
 
 \end_deeper
 \begin_layout BeginFrame
-Objectivos del proyecto
+No es tan fácil..
 \end_layout
 
-\begin_layout Itemize
-Plataforma que permita analizar programas:
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "30theight%"
+height_special "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family typewriter
+\series bold
+\size huge
+movl 
+\color red
+0x8
+\color inherit
+(
+\color blue
+%EDX
+\color inherit
+,
+\color blue
+%EBX
+\color inherit
+,
+\color red
+4
+\color inherit
+), 
+\color blue
+%EAX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Problema (1)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $EAX=mem[EDX+4*EBX+8]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<3->{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Problema (2)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-
-\series bold
-Facilitar 
-\series default
-la búsqueda vulnerabilidades concretas.
-\end_layout
-
-\begin_layout Itemize
-Definir 
-\series bold
-nuevos tipos
-\series default
- de vulnerabilidades.
-\end_layout
-
-\begin_layout Itemize
-No requiera el uso de 
-\series bold
-código fuente
-\series default
- de los programas analizados.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\series bold
-Fácilitar
-\series default
- el 
-\series bold
-análisis y descubrimiento
-\series default
- de vulnerabilidades en 
-\series bold
-programas binarios
-\series default
-.
+¿Y el desbordamiento? 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
+\begin_inset ERT
+status open
 
-\series bold
-Desarrollo
-\series default
- y aplicación de técnicas para la búsqueda de vulnerabilidades concretas.
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $4*EBX$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $EDX+4*EBX$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $EDX+4*EBX+8$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Formar una comunidad Democratizar el acceso a la implementación de la h.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-¡Ya disponible en Github! 
-\end_layout
-
 \end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginFrame
-Las herramientas apropiadas..
+Las herramientas apropiadas.
 \end_layout
 
 \begin_layout Standard
@@ -1177,12 +1342,27 @@ Las herramientas apropiadas..
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
+Representación abstracta de instrucciones ensamblador.
+\end_layout
+
+\begin_layout Enumerate
 Teorías de satisfabilidad (SMT).
 \end_layout
 
-\begin_layout Itemize
-Representación intermedia de instrucciones ensamblador.
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
@@ -1194,7 +1374,30 @@ Satisfiability Modulo Theories (SMT)
 
 \series bold
 \size giant
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "25theight%"
+height_special "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size giant
 \begin_inset Formula $X=Y$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -5529,7 +5732,7 @@ status collapsed
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename diagrams/input_space.dia
+	filename diagrams/input_space.eps
 	width 80col%
 
 \end_inset
@@ -6408,12 +6611,16 @@ status open
 \end_inset
 
 Fork Me
-\series default
-
 \begin_inset Quotes erd
 \end_inset
 
+
+\series default
  in Github! 
+\begin_inset Formula $\longrightarrow$
+\end_inset
+
+ 
 \begin_inset Flex URL
 status collapsed
 
@@ -6427,181 +6634,42 @@ https://github.com/neuromancer/SEA
 )
 \end_layout
 
-\begin_layout EndFrame
-
+\begin_layout BeginFrame
+Algunos desafíos..
 \end_layout
 
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo lo siguiente es opcional y generalmente no es necesario.
+\begin_layout Itemize
+La selección de caminos es manual (por ahora)
 \end_layout
 
-\end_inset
-
-Apéndice
+\begin_layout Itemize
+No está claro como propagar los tamaños de las entradas (escalabilidad,
+ bla, bla).
 \end_layout
 
-\begin_layout Subsection*
-Lecturas complementarias
+\begin_layout Itemize
+
+\series bold
+Absoluta carencia
+\series default
+ de tipos de datos algebráicos en Python (muy útil para para definir instruccion
+eso, operandos, etc).
 \end_layout
 
 \begin_layout BeginFrame
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[allowframebreaks]
-\end_layout
-
-\end_inset
-
-Lecturas complementarias
+¿Preguntas?
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatebookbibitems
-\end_layout
+\align center
+\begin_inset Graphics
+	filename imgs/SP5SwI4.png
+	lyxscale 50
+	height 50theight%
 
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Empezar con libros generales.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Referencias
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Autor1990"
-
-\end_inset
-
-A.
- Autor.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Manual de Lo que sea
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Editorial, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Y seguir con artículos, una lista breve.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Referencias
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Alguien2002"
-
-\end_inset
-
-S.
- Alguien.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Sobre esto y aquello
-\emph on
-.
-
-\emph default
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Revista Esto y Aquello
-\emph default
-.
- 2(1):50--100, 2000.
 \end_layout
 
 \begin_layout EndFrame
