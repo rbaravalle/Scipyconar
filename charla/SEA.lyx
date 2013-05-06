@@ -8,6 +8,8 @@
 \usetheme{Boadilla}
 % or ...
 
+
+%\usepackage{listings}
 \setbeamercovered{transparent}
 % or whatever (possibly just delete it)
 
@@ -277,6 +279,93 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}[fragile]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize},language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+258   nresp = packet_get_int();
+\end_layout
+
+\begin_layout Plain Layout
+
+259   if (nresp > 0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+260          response = malloc(nresp * sizeof(char*));
+\end_layout
+
+\begin_layout Plain Layout
+
+261          for (i = 0; i < nresp; i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+262             response[i] = packet_get_string(NULL);
+\end_layout
+
+\begin_layout Plain Layout
+
+263   }
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
 \end_layout
 
 \end_inset
@@ -1365,401 +1454,6 @@ status open
 
 \end_layout
 
-\begin_layout BeginFrame
-Satisfiability Modulo Theories (SMT)
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\series bold
-\size giant
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "25theight%"
-height_special "none"
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\series bold
-\size giant
-\begin_inset Formula $X=Y$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Lógica:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<1>{
-\end_layout
-
-\end_inset
-
-Lógica proposicional (
-\begin_inset Formula $x\wedge y=z$
-\end_inset
-
-)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<2->{
-\end_layout
-
-\end_inset
-
-
-\strikeout on
-Lógica proposicional (
-\begin_inset Formula $x\wedge y=z$
-\end_inset
-
-)
-\strikeout default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<1>{
-\end_layout
-
-\end_inset
-
-Cuantificadores (
-\begin_inset Formula $\forall x\centerdot x=y$
-\end_inset
-
-)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<2->{
-\end_layout
-
-\end_inset
-
-
-\strikeout on
-Cuantificadores (
-\begin_inset Formula $\forall x\centerdot x=y$
-\end_inset
-
-)
-\strikeout default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Matemática: 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<1>{
-\end_layout
-
-\end_inset
-
-Operaciones lineales (
-\begin_inset Formula $x+y=1$
-\end_inset
-
-)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<2->{
-\end_layout
-
-\end_inset
-
-
-\strikeout on
-Operaciones lineales (
-\begin_inset Formula $x+y=1$
-\end_inset
-
-)
-\strikeout default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<1>{
-\end_layout
-
-\end_inset
-
-Operaciones no lineales (
-\begin_inset Formula $x*x=y$
-\end_inset
-
-)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<2->{
-\end_layout
-
-\end_inset
-
-
-\strikeout on
-Operaciones no lineales (
-\begin_inset Formula $x*x=y$
-\end_inset
-
-)
-\strikeout default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<1>{
-\end_layout
-
-\end_inset
-
-Funciones (
-\begin_inset Formula $f(x)=y$
-\end_inset
-
-)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-only<2->{
-\end_layout
-
-\end_inset
-
-
-\strikeout on
-Funciones (
-\begin_inset Formula $f(x)=y$
-\end_inset
-
-)
-\strikeout default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Números Binarios (longitud finita)
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Aritmética de precisión finita (
-\begin_inset Formula $x+y=1)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Operaciones de bits (
-\begin_inset Formula $x\mbox{>>}y=z)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Arreglos (
-\begin_inset Formula $x[y]=z$
-\end_inset
-
-)
-\end_layout
-
-\end_deeper
 \begin_layout BeginFrame
 REIL
 \end_layout
@@ -5327,6 +5021,401 @@ status open
 \end_layout
 
 \begin_layout BeginFrame
+Satisfiability Modulo Theories (SMT)
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size giant
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "25theight%"
+height_special "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\size giant
+\begin_inset Formula $X=Y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lógica:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Lógica proposicional (
+\begin_inset Formula $x\wedge y=z$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Lógica proposicional (
+\begin_inset Formula $x\wedge y=z$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Cuantificadores (
+\begin_inset Formula $\forall x\centerdot x=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Cuantificadores (
+\begin_inset Formula $\forall x\centerdot x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Matemática: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Operaciones lineales (
+\begin_inset Formula $x+y=1$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Operaciones lineales (
+\begin_inset Formula $x+y=1$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Operaciones no lineales (
+\begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Operaciones no lineales (
+\begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Funciones (
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Funciones (
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Números Binarios (longitud finita)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aritmética de precisión finita (
+\begin_inset Formula $x+y=1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Operaciones de bits (
+\begin_inset Formula $x\mbox{>>}y=z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Arreglos (
+\begin_inset Formula $x[y]=z$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
 Symbolic Exploit Assistant (SEA)
 \end_layout
 
@@ -6389,7 +6478,7 @@ only<2->{
 \end_inset
 
 
-\begin_inset Formula $\pi_{bug}=\{\mbox{zf}\neq0\mbox{, ~}ite(t_{0}=0,\mbox{zf}=1,\mbox{zf}=0)\mbox{, ~}t_{0}=\mbox{eax}+\mbox{ebx}\}$
+\begin_inset Formula $\pi_{bug}\triangleq\mbox{zf}\neq0\wedge ite(t_{0}=0,\mbox{zf}=1,\mbox{zf}=0)\wedge t_{0}=\mbox{eax}+\mbox{ebx}$
 \end_inset
 
 
@@ -6429,7 +6518,7 @@ only<3->{
 
 \family roman
 
-\begin_inset Formula $\pi_{exp}=\{\mbox{eax}=0xdeadbeef\mbox{, \,}t_{1}=\mbox{ebp}+4\mbox{, \,}t_{1}=\mbox{ebp}+\mbox{ecx}\}$
+\begin_inset Formula $\pi_{exp}\triangleq\mbox{eax}=0xdeadbeef\wedge t_{1}=\mbox{ebp}+4\wedge t_{1}=\mbox{ebp}+\mbox{ecx}$
 \end_inset
 
 
@@ -6467,7 +6556,7 @@ Resolviendo restricciones
 
 \begin_layout Plain Layout
 Obtener 
-\begin_inset Formula $\pi_{bug}\cup\pi_{exp}$
+\begin_inset Formula $\pi_{bug}\wedge\pi_{exp}$
 \end_inset
 
 
