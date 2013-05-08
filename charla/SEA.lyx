@@ -307,6 +307,22 @@ begin{frame}[fragile]
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+frametitle{Una vulnerabilidad en OpenSSH 3.3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset listings
 lstparams "basicstyle={\footnotesize},language=C"
 inline false
@@ -843,7 +859,7 @@ status open
 \end_layout
 
 \begin_layout BeginFrame
-El dinero en el dinero..
+Hablemos de dinero..
 \end_layout
 
 \begin_layout Standard
@@ -1202,7 +1218,7 @@ use_parbox 0
 use_makebox 0
 width "100col%"
 special "none"
-height "30theight%"
+height "25theight%"
 height_special "none"
 status open
 
@@ -1213,8 +1229,12 @@ status open
 \series bold
 \size huge
 movl 
+\color blue
+%EAX
+\color inherit
+,
 \color red
-0x8
+ 0x8
 \color inherit
 (
 \color blue
@@ -1228,9 +1248,7 @@ movl
 \color red
 4
 \color inherit
-), 
-\color blue
-%EAX
+) 
 \end_layout
 
 \end_inset
@@ -1281,10 +1299,18 @@ status open
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $EAX=mem[EDX+4*EBX+8]$
+\begin_inset Formula $mem[EDX+4*EBX+8]=EAX$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Distintos modos de redireccionamiento.
+\end_layout
+
+\begin_layout Itemize
+Efectos laterales.
 \end_layout
 
 \end_deeper
@@ -6555,7 +6581,7 @@ Resolviendo restricciones
 \begin_inset Text
 
 \begin_layout Plain Layout
-Obtener 
+Calcular 
 \begin_inset Formula $\pi_{bug}\wedge\pi_{exp}$
 \end_inset
 
@@ -6724,25 +6750,85 @@ https://github.com/neuromancer/SEA
 \end_layout
 
 \begin_layout BeginFrame
-Algunos desafíos..
+¿Por qué Python?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/Tappedsnakes.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+A favor:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rápido desarrollo.
 \end_layout
 
 \begin_layout Itemize
-La selección de caminos es manual (por ahora)
+Amplia disponibilidad de librerías y bindings.
 \end_layout
 
 \begin_layout Itemize
-No está claro como propagar los tamaños de las entradas (escalabilidad,
- bla, bla).
+Gran comunidad.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+En contra:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gran heterogeneidad en los componentes de terceros.
 \end_layout
 
 \begin_layout Itemize
+Carencia de tipos algebráticos primitivos.
+\end_layout
 
-\series bold
-Absoluta carencia
-\series default
- de tipos de datos algebráicos en Python (muy útil para para definir instruccion
-eso, operandos, etc).
+\end_deeper
+\end_inset
+
+
 \end_layout
 
 \begin_layout BeginFrame
