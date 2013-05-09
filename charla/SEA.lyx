@@ -8,6 +8,8 @@
 \usetheme{Boadilla}
 % or ...
 
+
+%\usepackage{listings}
 \setbeamercovered{transparent}
 % or whatever (possibly just delete it)
 
@@ -77,7 +79,7 @@ Descubriendo vulnerabilidades en ejecutables con SEA
 status open
 
 \begin_layout Plain Layout
-
+Symbolic Exploit Assistant
 \end_layout
 
 \end_inset
@@ -113,7 +115,7 @@ G.
 status open
 
 \begin_layout Plain Layout
-
+CIFASIS - VERIMAG
 \end_layout
 
 \end_inset
@@ -284,6 +286,109 @@ status open
 
 \end_layout
 
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}[fragile]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+frametitle{Una vulnerabilidad en OpenSSH 3.3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize},language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+258   nresp = packet_get_int();
+\end_layout
+
+\begin_layout Plain Layout
+
+259   if (nresp > 0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+260          response = malloc(nresp * sizeof(char*));
+\end_layout
+
+\begin_layout Plain Layout
+
+261          for (i = 0; i < nresp; i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+262             response[i] = packet_get_string(NULL);
+\end_layout
+
+\begin_layout Plain Layout
+
+263   }
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginFrame
 Bugs y Exploits
 \end_layout
@@ -303,12 +408,9 @@ only<1-3>{
 \end_inset
 
 
-
 \begin_inset VSpace 45theight%
 \end_inset
 
-
-\lang spanish
 
 \begin_inset ERT
 status open
@@ -380,10 +482,7 @@ status open
 
 \end_inset
 
-
 ¿Que sucede cuando alguien descubre bugs o vulnerabilidades?
-\lang spanish
-
 \begin_inset ERT
 status open
 
@@ -535,7 +634,7 @@ only<2->{
 
 
 \begin_inset Graphics
-	filename ../../../../Code/phd/vulcain/Submissions/CSTVA12/slides/images/nuclear_symbol.png
+	filename imgs/nuclear_symbol.png
 	lyxscale 20
 	width 20col%
 
@@ -579,7 +678,7 @@ only<3->{
 
 
 \begin_inset Graphics
-	filename ../../../../Code/phd/vulcain/Submissions/CSTVA12/slides/images/google.png
+	filename imgs/google.png
 	lyxscale 20
 	width 30col%
 
@@ -619,7 +718,7 @@ only<4->{
 
 
 \begin_inset Graphics
-	filename ../../../../Code/phd/vulcain/Submissions/CSTVA12/slides/images/NewYorkTimes-logo.jpg
+	filename imgs/NewYorkTimes-logo.jpg
 	lyxscale 30
 	width 25col%
 
@@ -760,7 +859,7 @@ status open
 \end_layout
 
 \begin_layout BeginFrame
-El dinero en el dinero..
+Hablemos de dinero..
 \end_layout
 
 \begin_layout Standard
@@ -927,6 +1026,45 @@ status open
 
 \end_deeper
 \begin_layout BeginFrame
+Objectivos del proyecto
+\end_layout
+
+\begin_layout Itemize
+Plataforma que permita analizar programas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Facilitar 
+\series default
+la búsqueda vulnerabilidades concretas.
+\end_layout
+
+\begin_layout Itemize
+Definir 
+\series bold
+nuevos tipos
+\series default
+ de vulnerabilidades.
+\end_layout
+
+\begin_layout Itemize
+Sin requerir el uso de 
+\series bold
+código fuente
+\series default
+ del software analizado.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Formar una comunidad y democratizar el acceso a la implementación de este
+ tipo de herramientas.
+\end_layout
+
+\begin_layout BeginFrame
 ¿Reinventando la rueda ..?
 \end_layout
 
@@ -942,34 +1080,15 @@ status open
 \end_layout
 
 \begin_layout Itemize
-!Exploitable
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Exploitable"
-
-\end_inset
-
- (Microsoft Corp.)
+!Exploitable (Microsoft Corp.)
 \end_layout
 
 \begin_layout Itemize
 Automatic Generation of Control Flow Hijacking Exploits for Software Vulnerabili
 ties
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Heelan09"
-
-\end_inset
-
- (Universidad de Oxford)
+\size small
+ (U.
+ de Oxford)
 \end_layout
 
 \begin_deeper
@@ -985,7 +1104,7 @@ status open
 
 
 \backslash
-only<3->{
+only<2->{
 \end_layout
 
 \end_inset
@@ -1025,18 +1144,10 @@ status open
 
 \end_deeper
 \begin_layout Itemize
-Unleashing MAYHEM on Binary Code
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ChaARB12"
-
-\end_inset
-
-
+Unleashing MAYHEM on Binary Code 
+\size small
+(U.
+ de Carnegie Melon)
 \end_layout
 
 \begin_deeper
@@ -1052,7 +1163,7 @@ status open
 
 
 \backslash
-only<4->{
+only<3->{
 \end_layout
 
 \end_inset
@@ -1093,7 +1204,246 @@ status open
 
 \end_deeper
 \begin_layout BeginFrame
-Objectivos del proyecto
+No es tan fácil..
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "25theight%"
+height_special "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family typewriter
+\series bold
+\size huge
+movl 
+\color blue
+%EAX
+\color inherit
+,
+\color red
+ 0x8
+\color inherit
+(
+\color blue
+%EDX
+\color inherit
+,
+\color blue
+%EBX
+\color inherit
+,
+\color red
+4
+\color inherit
+) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<2->{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Problema (1)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $mem[EDX+4*EBX+8]=EAX$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Distintos modos de redireccionamiento.
+\end_layout
+
+\begin_layout Itemize
+Efectos laterales.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+uncover<3->{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Problema (2)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+¿Y el desbordamiento? 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $4*EBX$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $EDX+4*EBX$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<6->
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $EDX+4*EBX+8$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Las herramientas apropiadas.
 \end_layout
 
 \begin_layout Standard
@@ -1101,6 +1451,29 @@ Objectivos del proyecto
 \begin_inset Graphics
 	filename imgs/frame236.jpg
 	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Representación abstracta de instrucciones ensamblador.
+\end_layout
+
+\begin_layout Enumerate
+Teorías de satisfabilidad (SMT).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
 
 \end_inset
 
@@ -4673,40 +5046,1028 @@ status open
 
 \end_layout
 
-\begin_layout EndFrame
-
+\begin_layout BeginFrame
+Satisfiability Modulo Theories (SMT)
 \end_layout
 
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
+\begin_layout Standard
+\align center
+
+\series bold
+\size giant
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "25theight%"
+height_special "none"
 status open
 
 \begin_layout Plain Layout
-Todo lo siguiente es opcional y generalmente no es necesario.
+\align center
+
+\series bold
+\size giant
+\begin_inset Formula $X=Y$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
-Apéndice
+
 \end_layout
 
-\begin_layout Subsection*
-Lecturas complementarias
+\begin_layout Itemize
+Lógica:
 \end_layout
 
-\begin_layout BeginFrame
+\begin_deeper
+\begin_layout Itemize
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-[allowframebreaks]
+
+\backslash
+only<1>{
 \end_layout
 
 \end_inset
 
-Lecturas complementarias
+Lógica proposicional (
+\begin_inset Formula $x\wedge y=z$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Lógica proposicional (
+\begin_inset Formula $x\wedge y=z$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Cuantificadores (
+\begin_inset Formula $\forall x\centerdot x=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Cuantificadores (
+\begin_inset Formula $\forall x\centerdot x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Matemática: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Operaciones lineales (
+\begin_inset Formula $x+y=1$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Operaciones lineales (
+\begin_inset Formula $x+y=1$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Operaciones no lineales (
+\begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Operaciones no lineales (
+\begin_inset Formula $x*x=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<1>{
+\end_layout
+
+\end_inset
+
+Funciones (
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\strikeout on
+Funciones (
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+)
+\strikeout default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Números Binarios (longitud finita)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Aritmética de precisión finita (
+\begin_inset Formula $x+y=1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Operaciones de bits (
+\begin_inset Formula $x\mbox{>>}y=z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Arreglos (
+\begin_inset Formula $x[y]=z$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Symbolic Exploit Assistant (SEA)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="10text%">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="20text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/500px-Windows_logo_-_2002.svg.png
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Código ensamblador
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+abstracto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Conjunto de restricciones
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/500px-Tux.svg.png
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/arrow.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size footnotesize
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ 
+\color red
+eax
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ebx
+\color inherit
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size footnotesize
+02: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size footnotesize
+..
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/arrow.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/smt.png
+	lyxscale 30
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename imgs/Mac_Operating_System_Logo.jpg
+	lyxscale 20
+	height 15theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¿Donde están los exploits?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename diagrams/input_space.eps
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¿Una vulnerabilidad?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ 
+\color red
+eax
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ebx
+\color inherit
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula $t_{0}=0$
+\end_inset
+
+ then zf
+\begin_inset Formula $=1$
+\end_inset
+
+ else zf
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if zf
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+
+\color red
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\begin_inset Formula $t_{1}$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ 
+\color red
+eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Sobreescribiendo una dirección de memoria:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+
+\family typewriter
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+\size small
+16: mem[ebp
+\begin_inset Formula $+4$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ 
+\begin_inset Formula $0xdeadbeef$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\size small
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $t_{1}=\mbox{ebp}+4$
+\end_inset
+
+ 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $\mbox{eax}=0xdeadbeef$
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Generando restricciones
 \end_layout
 
 \begin_layout Standard
@@ -4717,137 +6078,773 @@ status open
 
 
 \backslash
-beamertemplatebookbibitems
+only<1>{
 \end_layout
 
 \end_inset
 
 
-\begin_inset Note Note
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
 status open
 
 \begin_layout Plain Layout
-Empezar con libros generales.
-\end_layout
 
+\family typewriter
+01: 
+\begin_inset Formula $t_{0}=$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Referencias
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Autor1990"
-
+ eax
+\begin_inset Formula $+$
 \end_inset
 
-A.
- Autor.
- 
-\begin_inset ERT
-status collapsed
+ebx 
+\end_layout
 
 \begin_layout Plain Layout
 
+\family typewriter
+02: if 
+\begin_inset Formula $t_{0}=0$
+\end_inset
 
-\backslash
-newblock
-\end_layout
+ then zf
+\begin_inset Formula $=1$
+\end_inset
 
+ else zf
+\begin_inset Formula $=0$
 \end_inset
 
 
-\emph on
-Manual de Lo que sea
-\emph default
-.
-\begin_inset ERT
-status collapsed
+\end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-newblock
-\end_layout
-
+\family typewriter
+03: if zf
+\begin_inset Formula $\neq0$
 \end_inset
 
- Editorial, 1990.
-\begin_inset ERT
-status collapsed
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 
+\family typewriter
+15: 
+\begin_inset Formula $t_{1}=$
+\end_inset
 
-\backslash
-beamertemplatearticlebibitems
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\begin_inset Formula $t_{1}$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
 \end_layout
 
 \end_inset
 
 
-\begin_inset Note Note
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Y seguir con artículos, una lista breve.
- 
+
+}
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Bibliography
-\labelwidthstring Referencias
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Alguien2002"
-
-\end_inset
-
-S.
- Alguien.
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-newblock
+only<2>{
 \end_layout
 
 \end_inset
 
- Sobre esto y aquello
-\emph on
-.
 
-\emph default
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula ${\color{blue}t_{0}}=$
+\end_inset
+
  
+\color blue
+eax
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color blue
+ebx
+\color inherit
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula ${\color{blue}t_{0}}=0$
+\end_inset
+
+ then 
+\color blue
+zf
+\color inherit
+
+\begin_inset Formula $=1$
+\end_inset
+
+ else 
+\color blue
+zf
+\color inherit
+
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if 
+\color blue
+zf
+\color inherit
+
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula $t_{1}=$
+\end_inset
+
+ ebp
+\begin_inset Formula $+$
+\end_inset
+
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\begin_inset Formula $t_{1}$
+\end_inset
+
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
-status collapsed
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-newblock
+only<3>{
 \end_layout
 
 \end_inset
 
 
-\emph on
-Revista Esto y Aquello
-\emph default
-.
- 2(1):50--100, 2000.
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+
+\family typewriter
+01: 
+\begin_inset Formula $t_{0}=$
+\end_inset
+
+ eax
+\begin_inset Formula $+$
+\end_inset
+
+ebx 
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+02: if 
+\begin_inset Formula $t_{0}=0$
+\end_inset
+
+ then zf
+\begin_inset Formula $=1$
+\end_inset
+
+ else zf
+\begin_inset Formula $=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+03: if zf
+\begin_inset Formula $\neq0$
+\end_inset
+
+ then goto 
+\begin_inset Formula $15$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+15: 
+\begin_inset Formula ${\color{blue}t_{1}}=$
+\end_inset
+
+ 
+\color blue
+ebp
+\color inherit
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\color blue
+ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+16: mem[
+\color blue
+
+\begin_inset Formula $t_{1}$
+\end_inset
+
+
+\color inherit
+] 
+\begin_inset Formula $:=$
+\end_inset
+
+ 
+\color blue
+eax
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+..
+\end_layout
+
+\begin_layout Plain Layout
+
+\family typewriter
+99: ret
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<2->{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\pi_{bug}\triangleq\mbox{zf}\neq0\wedge ite(t_{0}=0,\mbox{zf}=1,\mbox{zf}=0)\wedge t_{0}=\mbox{eax}+\mbox{ebx}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+only<3->{
+\end_layout
+
+\end_inset
+
+
+\family roman
+
+\begin_inset Formula $\pi_{exp}\triangleq\mbox{eax}=0xdeadbeef\wedge t_{1}=\mbox{ebp}+4\wedge t_{1}=\mbox{ebp}+\mbox{ecx}$
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Resolviendo restricciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="20page%">
+<column alignment="center" valignment="top" width="2page%">
+<column alignment="center" valignment="top" width="20page%">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="30page%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calcular 
+\begin_inset Formula $\pi_{bug}\wedge\pi_{exp}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Generar restricciones SMT-LIB2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resolver con un solver SMT (Z3, CVC, ..)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Resultado:}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula $\mbox{eax}=0xdeadbeef$
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula $\mbox{ebx}=0x21524111$
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset Formula $\mbox{ecx}=0x00000004$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¡SEA en acción!
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/anykey.jpg
+	height 50theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+(
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+Fork Me
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ in Github! 
+\begin_inset Formula $\longrightarrow$
+\end_inset
+
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/neuromancer/SEA
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout BeginFrame
+¿Por qué Python?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/Tappedsnakes.png
+	height 40theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+A favor:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Rápido desarrollo.
+\end_layout
+
+\begin_layout Itemize
+Amplia disponibilidad de librerías y bindings.
+\end_layout
+
+\begin_layout Itemize
+Gran comunidad.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Itemize
+En contra:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gran heterogeneidad en los componentes de terceros.
+\end_layout
+
+\begin_layout Itemize
+Carencia de tipos algebráticos primitivos.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+¿Preguntas?
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imgs/SP5SwI4.png
+	lyxscale 50
+	height 50theight%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
