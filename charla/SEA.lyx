@@ -1039,7 +1039,7 @@ Plataforma que permita analizar programas:
 \series bold
 Facilitar 
 \series default
-la búsqueda vulnerabilidades concretas.
+la búsqueda de vulnerabilidades concretas.
 \end_layout
 
 \begin_layout Itemize
@@ -6757,7 +6757,7 @@ https://github.com/neuromancer/SEA
 \align center
 \begin_inset Graphics
 	filename imgs/Tappedsnakes.png
-	height 40theight%
+	height 35theight%
 
 \end_inset
 
@@ -6776,7 +6776,7 @@ width "50col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 A favor:
@@ -6788,11 +6788,11 @@ Rápido desarrollo.
 \end_layout
 
 \begin_layout Itemize
-Amplia disponibilidad de librerías y bindings.
+Amplia disponibilidad de librerías de terceros.
 \end_layout
 
 \begin_layout Itemize
-Gran comunidad.
+Extensa y activa comunidad.
 \end_layout
 
 \end_deeper
@@ -6810,7 +6810,7 @@ width "50col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status collapsed
+status open
 
 \begin_layout Itemize
 En contra:
@@ -6818,11 +6818,11 @@ En contra:
 
 \begin_deeper
 \begin_layout Itemize
-Gran heterogeneidad en los componentes de terceros.
+Alta heterogeneidad en los componentes de terceros.
 \end_layout
 
 \begin_layout Itemize
-Carencia de tipos algebráticos primitivos.
+Carencia de tipos algebráicos de datos.
 \end_layout
 
 \end_deeper
